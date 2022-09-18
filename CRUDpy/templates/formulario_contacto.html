@@ -1,0 +1,19 @@
+<!DOCTYPE>
+<html lang="ES">
+    <head>
+        <title>Formulario de Contacto</title>
+    </head>
+    <body>
+            <h1>Contáctanos</h1>
+              {% if form.errors %}
+                 <p style="color: red;">Por favor revisa este campo</p>
+              {% endif %}
+            <form action="" method="POST">{% csrf_token %}
+                <table><th>
+                    {{form.as_table}}
+                </th></table>
+                <input type="submit" value"Enviar">
+            </form>
+    </body>
+</html>
+

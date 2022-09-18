@@ -1,0 +1,23 @@
+<html lang="ES">
+    <body>
+        {% include 'superior/barra.html' %}
+        <h1>
+            Hola desde la plantilla!
+        </h1>
+        <p>fecha: {{now.day}}</p>
+        {%if nombre_persona == "Juan" %}
+        <p>Te llamas Juan</p>
+        {% else %}
+        <p>No te llamas Juan</p>
+        {% endif %}
+            <ul>
+                {% if temas_cursos %}
+                 {% for tema in temas_curso %}
+                 <li> {{tema|first|lower}}</li>
+                 {% endfor %}
+                 {% else %}
+                 <p>no hay temas que mostrar</p>
+                 {% endif %}
+            </ul>
+    </body>
+</html>
